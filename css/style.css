@@ -1,4 +1,3 @@
-
 /* Changes how the padding is done */
 *,
 *::before,
@@ -10,21 +9,17 @@
 :root {
   --ff-primary: 'Source Sans Pro', sans-serif;
   --ff-secondary: 'Source Code Pro', monospace;
-
   --fw-reg: 300;
   --fw-bold: 900;
-
-  --clr-light:#fff;
+  --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #15e0bd;
-
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
-
-  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
-        0.125em 0.125em 0.25em rgba(0,0,0,.15);
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
 
 @media (min-width: 800px) {
@@ -36,10 +31,7 @@
   }
 }
 
-
-
 /* General Styles */
-
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -48,9 +40,11 @@ body {
   font-size: var(--fs-body);
   line-height: 1.6;
 }
+
 section {
   padding: 5em 2em;
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -60,7 +54,7 @@ strong {
   font-weight: var(--fw-bold);
 }
 
-:focus{
+:focus {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
 }
@@ -95,20 +89,23 @@ h3 {
 h1 {
   font-size: var(--fs-h1);
 }
+
 h2 {
   font-size: var(--fs-h2);
 }
+
 h3 {
   font-size: var(--fs-h3);
 }
 
-
 .section__title {
   margin-bottom: 0.25em;
 }
+
 .section__title--intro {
   font-weight: var(--fw-reg);
 }
+
 .section__title--intro strong {
   display: block;
   font-weight: var(--fw-bold);
@@ -120,7 +117,7 @@ h3 {
 }
 
 .section__subtitle--intro,
-.section__subtitle--about{
+.section__subtitle--about {
   background: var(--clr-accent);
   padding: .25em 1em;
   font-family: var(--ff-secondary);
@@ -133,13 +130,14 @@ nav {
 }
 
 /* Intro Section */
-
 .intro {
   position: relative;
 }
+
 .intro__img {
   box-shadow: var(--bs);
 }
+
 @media (min-width: 600px) {
   .intro {
     display: grid;
@@ -151,12 +149,14 @@ nav {
       "img subtitle";
     grid-template-columns: min-content max-content;
   }
+
   .intro__img {
     grid-area: img;
     min-width: 250px;
     position: relative;
     z-index: 2;
   }
+
   .section__subtitle--intro {
     align-self: start;
     grid-column: -1 / 1;
@@ -169,7 +169,6 @@ nav {
 }
 
 /* My Services Section */
-
 .my-services {
   /* Add the color just in case the image does not load */
   background-color: var(--clr-dark);
@@ -180,10 +179,12 @@ nav {
   color: var(--clr-light);
   text-align: center;
 }
+
 .section__title--services {
   color: var(--clr-accent);
   position: relative;
 }
+
 /* Code for the linebreak */
 .section__title--services::after {
   content: '';
@@ -195,11 +196,12 @@ nav {
   /* background: currentColor); */
   opacity: 0.25;
 }
+
 .services {
   margin-bottom: 4em;
 }
 
-.service{
+.service {
   max-width: 500px;
   margin: 0 auto;
 }
@@ -211,7 +213,50 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
-  .service + .service {
+
+  .service+.service {
     margin-left: 2em;
+  }
+}
+
+/* About Me Section */
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width:600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+        "title img"
+        "subtitle img"
+        "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section__title--about{
+    grid-area: title;
+  }
+
+  .section__subtitle--about {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    /* text can never go into the image */
+    padding-right: calc(200px + 2em);
+  }
+
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
   }
 }
