@@ -144,3 +144,42 @@ nav {
     width: calc(100% + 1.5em);
   }
 }
+
+/* My Services Section */
+
+.my-services {
+  /* Add the color just in case the image does not load */
+  background-color: var(--clr-dark);
+  background-image: url(../img/services-bg.png);
+  background-size: cover;
+  /* reduces bg brightness */
+  /* background-blend-mode: multiply  */
+  color: var(--clr-light);
+  text-align: center;
+}
+.section__title--services {
+  color: var(--clr-accent);
+  position: relative;
+}
+/* Code for the linebreak */
+.section__title--services::after {
+  content: '';
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  /* background: currentColor); */
+  opacity: 0.25;
+}
+
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .service + .service {
+    margin-left: 2em;
+  }
+}
