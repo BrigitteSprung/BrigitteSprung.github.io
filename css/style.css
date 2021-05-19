@@ -1,0 +1,7 @@
+
+/* Changes how the padding is done */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
