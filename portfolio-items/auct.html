@@ -45,23 +45,42 @@
 			Capstone project <strong>AUCT</strong>
 		</h1>
 		<p class="section__subtitle section__subtitle--intro">Audio capture, segmentation and labelling tool</p>
-		<img src="../img/programming.jpg" alt="project picture" class="intro__img">
+		<img src="../img/programming02.jpg" alt="project picture" class="intro__img">
 	</section>
 
 	<div class="portfolio-item-individual">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-			nisi ut aliquip ex ea commodo consequat.</p>
-		<img src="../img/programming02.jpg" alt="">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-			nisi ut aliquip ex ea commodo consequat.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-			sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-			nisi ut aliquip ex ea commodo consequat.</p>
+		<p>South Africa has eleven official languages. Building out tools to support 
+			small-scale voice recognition across a large number of languages 
+			requires having a large amount of labeled audio files for training and testing. 
+			Your task is to create a web-based, or combination web- and mobile-based tool 
+			to support the collection and in situ segmentation and labeling of audio data.</p>
+		<img src="../img/auct-dashboard.jpg" alt="" class="portfolio-item__img">
+		<div class="portfolio-item__technologies">
+			<p>Front-end Development</p>
+			<p>HTML</p>
+			<p>CSS</p>
+			<p>Firebase</p>
+		</div>
+		<p>The use case is: a participant would use your tool to record a set of words from a list. 
+			These would then be segmented, with some control to throw out mistakes that may have been 
+			made during data capture, resulting in a set of individual, labeled audio files.</p>
+			<img src="../img/auct-mobile.jpg" alt="" class="portfolio-item__img">
+		<p>The purpose of the project was to engineer a software system that allows research participants to
+			submit audio data over the web, have it automatically segmented, and stored for later labelling
+			and analysis by a researcher. This was achieved by using hierarchical architectures.  </p>
+			<p>The overall
+				system took a central-repository pattern, with a Firebase cloud server at the core. Each of the
+				three sub-systems had a separate architecture, with the processing node being a data pipeline, and
+				the two web-applications been Model-View-Controller oriented. This design choice allowed for
+				rapid parallel development of all the core features—wordlists, recording, segmentation, and
+				labelling—and provided a robust overall system and enough time to add additional features—
+				suggested labels, file export, database statistics, functional aesthetics, etc.</p>
+			<p>
+				<p>The tests designed at
+					the outset of the project ran successfully and the results demonstrate that this software system
+					achieved its goals spectacularly.</p>
+				<a href="https://github.com/fergusdixon/AuCT" class="btn">See the Github Repo</a>
+			</p>
 	</div>
 
 
