@@ -466,3 +466,21 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+
+.portfolio-item-individual img{
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.portfolio-item__technologies {
+  display: flex;
+}
+
+.portfolio-item__technologies p{
+  background: var(--clr-accent);
+  padding: .5em;
+  text-decoration: wavy;
+  font-family: var(--ff-secondary);
+  box-shadow: var(--bs);
+  border-radius: 10rem;
+}
