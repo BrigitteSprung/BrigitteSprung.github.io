@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=devivce-width, initial-scale=1.0">
+	<title>Brigitte Sprung Portfolio</title>
+	<!-- link to main stylesheet -->
+
+	<!-- link to normalize stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro:wght@400;900&display=swap" rel="stylesheet">
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+	<header>
+		<!-- logo -->
+		<div class="logo">
+			<img src="../img/devlogo.jpg" alt="">
+		</div>
+		<!-- hamburger nav toggle -->
+		<button class="nav-toggle" aria-label="toggle navigation" name="button">
+			<span class="hamburger"></span>
+		</button>
+		<!-- navigation start -->
+		<nav class="nav">
+			<ul class="nav__list">
+				<li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
+				<li class="nav__item"><a href="../index.html#services" class="nav__link">My Services</a></li>
+				<li class="nav__item"><a href="../index.html#about-me" class="nav__link">About Me</a></li>
+				<li class="nav__item"><a href="../index.html#my-work" class="nav__link">My Work</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Introduction -->
+	<section class="intro">
+		<h1 class="section__title section__title--intro">
+			Capstone project <strong>AUCT</strong>
+		</h1>
+		<p class="section__subtitle section__subtitle--intro">Audio capture, segmentation and labelling tool</p>
+		<img src="../img/programming02.jpg" alt="project picture" class="intro__img">
+	</section>
+
+	<div class="portfolio-item-individual">
+		<p>South Africa has eleven official languages. Building out tools to support 
+			small-scale voice recognition across a large number of languages 
+			requires having a large amount of labeled audio files for training and testing. 
+			Your task is to create a web-based, or combination web- and mobile-based tool 
+			to support the collection and in situ segmentation and labeling of audio data.</p>
+		<img src="../img/auct-dashboard.jpg" alt="" class="portfolio-item__img">
+		<div class="portfolio-item__technologies">
+			<p>Front-end Development</p>
+			<p>HTML</p>
+			<p>CSS</p>
+			<p>Firebase</p>
+		</div>
+		<p>The use case is: a participant would use your tool to record a set of words from a list. 
+			These would then be segmented, with some control to throw out mistakes that may have been 
+			made during data capture, resulting in a set of individual, labeled audio files.</p>
+			<img src="../img/auct-mobile.jpg" alt="" class="portfolio-item__img">
+		<p>The purpose of the project was to engineer a software system that allows research participants to
+			submit audio data over the web, have it automatically segmented, and stored for later labelling
+			and analysis by a researcher. This was achieved by using hierarchical architectures.  </p>
+			<p>The overall
+				system took a central-repository pattern, with a Firebase cloud server at the core. Each of the
+				three sub-systems had a separate architecture, with the processing node being a data pipeline, and
+				the two web-applications been Model-View-Controller oriented. This design choice allowed for
+				rapid parallel development of all the core features—wordlists, recording, segmentation, and
+				labelling—and provided a robust overall system and enough time to add additional features—
+				suggested labels, file export, database statistics, functional aesthetics, etc.</p>
+				<p>The tests designed at
+					the outset of the project ran successfully and the results demonstrate that this software system
+					achieved its goals spectacularly.</p>
+			<p>	
+				<a href="https://github.com/fergusdixon/AuCT" class="btn">See the Github Repo</a>
+			</p>
+	</div>
+
+
+	<!-- Footer -->
+	<footer class="footer">
+		<a href="mailto:brigittesprung@gmail.com" class="footer__link">brigittesprung@gmail.com</a>
+		<ul class="social-list">
+			<li class="social-list__item">
+				<a href="#" class="social-list__link">
+					<i class="fab fa-codepen"></i>
+				</a>
+			</li>
+			<li class="social-list__item">
+				<a href="#" class="social-list__link">
+					<i class="fab fa-goodreads"></i>
+				</a>
+			</li>
+			<li class="social-list__item">
+				<a href="https://www.linkedin.com/in/brigittesprung/" class="social-list__link">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</li>
+			<li class="social-list__item">
+				<a href="https://github.com/BrigitteSprung" class="social-list__link">
+					<i class="fab fa-github"></i>
+				</a>
+			</li>
+		</ul>
+	</footer>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="../js/index.js"></script>
+</body>
+
+</html>
