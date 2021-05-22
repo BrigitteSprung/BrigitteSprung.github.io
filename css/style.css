@@ -465,6 +465,7 @@ header {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  justify-content: center;
 }
 
 .portfolio-item-individual img{
