@@ -474,6 +474,7 @@ header {
 }
 .portfolio-item__technologies {
   display: flex;
+  justify-content: left;
 }
 
 .portfolio-item__technologies p{
@@ -482,5 +483,9 @@ header {
   text-decoration: wavy;
   font-family: var(--ff-secondary);
   box-shadow: var(--bs);
-  border-radius: 10rem;
+  border-radius: 10px;
+}
+
+.portfolio-item__img {
+  box-shadow: var(--bs);
 }
