@@ -469,6 +469,7 @@ header {
 }
 
 .portfolio-item-individual img{
+  width: 90%;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -490,3 +491,11 @@ header {
 .portfolio-item__img {
   box-shadow: var(--bs);
 }
+
+/* @media (min-width: 600px) {
+  .portfolio-item-individual img{
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} */
