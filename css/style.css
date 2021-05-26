@@ -18,6 +18,7 @@
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+  --fs-tag: 0.75rem;
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 }
@@ -53,6 +54,7 @@ section {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 strong {
@@ -146,7 +148,7 @@ header {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 200px;
 }
 
 /* navigation */
@@ -387,19 +389,40 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: auto;
+  max-width: 60em;
   /* Can also set a max width, with margin:auto */
 }
 
 .portfolio__item {
   background: var(--clr-accent);
   overflow: hidden;
+  text-decoration: none;
 }
 
 .portfolio__img {
+
+object-fit: cover;
   transition:
     transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
 }
+.portfolio__text {
+  text-align: center;
+  padding: 10px 20px;
+
+}
+.portfolio__heading {
+  color: var(--clr-dark);
+}
+.portfolio__subheading {
+  color: var(--clr-dark);
+  font-family: var(--ff-secondary);
+}
+.portfolio__heading:hover {
+  opacity: .7;
+  text-decoration: underline;
+}
+
 
 .portfolio__item:focus {
   position: relative;
@@ -469,6 +492,7 @@ header {
 }
 
 .portfolio-item-individual img{
+  width: 90%;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -476,13 +500,15 @@ header {
 .portfolio-item__technologies {
   display: flex;
   justify-content: left;
+ 
 }
 
 .portfolio-item__technologies p{
   background: var(--clr-accent);
   padding: .5em;
-  text-decoration: wavy;
+  /* text-decoration: wavy; */
   font-family: var(--ff-secondary);
+  font-size: var(--fs-tag);
   box-shadow: var(--bs);
   border-radius: 10px;
 }
